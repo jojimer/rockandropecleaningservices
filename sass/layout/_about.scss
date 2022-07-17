@@ -16,22 +16,22 @@
             grid-auto-rows: minmax(33rem, auto);
 
             & :nth-child(1){
-                @include bg_image_gradient('../../img/about_us/rockandrope_team1.jpg');
+                @include bg_image_gradient('../img/about_us/rockandrope_team1.jpg');
             }
             & :nth-child(2){
-                @include bg_image_gradient('../../img/about_us/rockandrope_at_work1.jpg');
+                @include bg_image_gradient('../img/about_us/rockandrope_at_work1.jpg');
             }
             & :nth-child(3){
-                @include bg_image_gradient('../../img/about_us/rockandrope_at_work2.jpg');
+                @include bg_image_gradient('../img/about_us/rockandrope_at_work2.jpg');
             }
             & :nth-child(4){
-                @include bg_image_gradient('../../img/about_us/rockandrope_team2.jpg');
+                @include bg_image_gradient('../img/about_us/rockandrope_team2.jpg');
             }
             & :nth-child(5){
-                @include bg_image_gradient('../../img/about_us/rockandrope_team3.jpg');
+                @include bg_image_gradient('../img/about_us/rockandrope_team3.jpg');
             }
             & :nth-child(6){
-                @include bg_image_gradient('../../img/about_us/rockandrope_at_work3.jpg');
+                @include bg_image_gradient('../img/about_us/rockandrope_at_work3.jpg');
             }
         }
         &__team_image {

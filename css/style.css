@@ -411,7 +411,7 @@ body {
 
 .hero {
   height: 80rem;
-  background-image: linear-gradient(to right, rgba(92, 57, 19, 0.5) 40%, rgba(8, 8, 8, 0)), url(../../img/hero.jpg);
+  background-image: linear-gradient(to right, rgba(92, 57, 19, 0.5) 40%, rgba(8, 8, 8, 0)), url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%; }
@@ -459,17 +459,17 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(33rem, auto); }
     .about-grids__images :nth-child(1) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../../img/about_us/rockandrope_team1.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_team1.jpg"); }
     .about-grids__images :nth-child(2) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../../img/about_us/rockandrope_at_work1.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_at_work1.jpg"); }
     .about-grids__images :nth-child(3) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../../img/about_us/rockandrope_at_work2.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_at_work2.jpg"); }
     .about-grids__images :nth-child(4) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../../img/about_us/rockandrope_team2.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_team2.jpg"); }
     .about-grids__images :nth-child(5) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../../img/about_us/rockandrope_team3.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_team3.jpg"); }
     .about-grids__images :nth-child(6) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../../img/about_us/rockandrope_at_work3.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_at_work3.jpg"); }
   .about-grids__team_image {
     background-blend-mode: color-burn;
     background-size: cover;
@@ -485,7 +485,7 @@ body {
     background-color: #fff; }
     .about-grids__text::after {
       content: "";
-      background-image: url(../../img/logo.png);
+      background-image: url(../img/logo.png);
       background-size: contain;
       background-repeat: no-repeat;
       filter: grayscale(1);
@@ -595,7 +595,7 @@ body {
       opacity: 1; }
   .our_projects::after {
     content: "";
-    background-image: url(../../img/logo.png);
+    background-image: url(../img/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     filter: grayscale(1);
