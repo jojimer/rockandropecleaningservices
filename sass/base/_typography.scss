@@ -1,0 +1,213 @@
+.header {
+    &-info {
+        color: $color-white;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.5;
+    }
+
+    &-main-navigation__wrap {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        color: $color-black;
+        text-transform: uppercase;
+        font-size: $default-font-size;
+
+        a {
+            text-decoration: none;
+            color: $color-primary-dark;
+
+            &.active {
+                color: $color-primary;
+            }
+        }
+
+        .btn-get-quote {
+            text-align: center;
+
+            a {
+                font-family: 'Lexend Deca', sans-serif;
+                font-weight: 900;
+                letter-spacing: -0.7;
+                font-size: 2rem;
+            }
+        } 
+    }
+}
+
+.hero {
+    position: relative;
+
+    &-text {
+        &::before {
+            content: "";
+            border-top: 1rem solid $color-primary;
+            width: 10.5rem;
+            position: absolute;
+            top: -1.75rem;
+        }
+
+        font-size: 10.5rem;
+        color: $color-white;
+        font-family: 'Lexend Deca', sans-serif;
+        text-transform: uppercase;
+        line-height: 10rem;
+        letter-spacing: -0.6rem;
+        margin-left: 3.75rem;
+        font-weight: 700;
+
+        span {
+            display: block;
+
+            &:not(:last-child) {
+                transform: translateX(-0.9rem);
+            }
+        }        
+    }
+}
+
+.overview {
+    &-grids {
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1.25;
+
+        &__what_we_do {
+            color: $color-primary-dark;
+        }
+        &__what_we_offer {
+            color: $color-white;
+        }
+        &:not(:last-child) {
+            > *:not(p) {
+                margin-bottom: 1.75rem;
+            }
+        }
+
+        h3 {
+            font-size: 3.2rem;
+        }
+
+        p {
+            font-size: $default-font-size;
+            text-align: justify;
+            text-transform: capitalize;
+
+            strong {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+.secondary-title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    border-bottom: 0.5rem solid $color-primary;
+    display: inline-block;    
+    padding-bottom: 0.5rem;
+    margin-bottom: 5rem;
+    width: fit-content;
+}
+
+.about-grids__text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: $default-font-size;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.25;
+    color: $color-black;
+}
+
+.services {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+
+    &__shadow_title {
+        font-size: 35.5rem;                       
+        letter-spacing: -4.2rem;
+        transform: scaleY(1.15);
+        color: $color-primary-light;
+        span:not(:last-child) {
+            letter-spacing: -5rem;
+            transform: scaleX(1.25) translateX(4rem);
+            display: inline-block;
+        }
+        span:last-child {
+            transform: translateX(12.5rem);
+            display: inline-block;
+        }
+    }
+
+    &-content {        
+        color: $color-primary-dark; 
+
+        &-title {
+            font-size: 31rem;                       
+            letter-spacing: -3.5rem;
+            transform: scaleY(1.15) translate(-3rem, 1.3rem);
+            
+            span:not(:last-child) {
+                letter-spacing: -5rem;
+                transform: scaleX(1.25) translateX(4rem);
+                display: inline-block;
+            }
+            span:last-child {
+                transform: translateX(12.5rem);
+                display: inline-block;
+            }
+        }
+        &-list {
+            font-size: 3rem;
+            font-weight: 700;
+            list-style-type: disc;
+        }
+    }
+}
+
+.our_projects {
+    &-lists {
+        font-size: 1.8rem;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        color: $color-primary-dark;
+        font-weight: 900;
+
+        .active {
+            color: $color-primary;
+        }
+    }
+}
+
+.footer-contacts {
+    &__main {
+        color: $color-white;
+        font-family: 'Lexend Deca', sans-serif;
+        text-align: center;
+        p {
+            color: $color-primary;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+        }
+        h4 {
+            font-size: 10rem;
+        }
+    }
+    &__sub {
+        color: $color-white;
+        font-family: 'Roboto', sans-serif;
+        line-height: 7rem;
+        letter-spacing: 1.25;
+        font-size: 2.6rem;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                font-weight: 300;
+            }
+        }
+    }
+}

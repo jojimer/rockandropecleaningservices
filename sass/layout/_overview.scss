@@ -1,0 +1,33 @@
+.overview {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(55rem, auto);
+    grid-template-areas:
+        "left-top right"
+        "left-bottom right"
+    ;
+
+    &-grids {
+        &__what_we_do {
+            background-color: $color-primary;
+            grid-area: left-top;
+        }
+        &__what_we_offer {
+            background-color: $color-primary-dark;
+            grid-area: left-bottom;
+        }
+        &__image {
+            grid-area: right;
+            background-image: url(../../img/1000H.png);
+            background-size: cover;
+        }
+        &:not(:last-child) {
+            height: 55rem;
+            padding: 6.5rem 12.75rem;
+            align-items: center;
+            justify-items: center;
+            display: grid;
+        }  
+    }    
+}

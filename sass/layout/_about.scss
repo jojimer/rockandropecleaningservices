@@ -1,0 +1,55 @@
+.about {
+    width: 100%;
+    height: 99rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(5.5rem, auto);
+    grid-template-areas: 
+        "left right"
+    ;
+
+    &-grids {
+        &__images {
+            grid-area: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(33rem, auto);
+
+            & :nth-child(1){
+                @include bg_image_gradient('../../img/about_us/rockandrope_team1.jpg');
+            }
+            & :nth-child(2){
+                @include bg_image_gradient('../../img/about_us/rockandrope_at_work1.jpg');
+            }
+            & :nth-child(3){
+                @include bg_image_gradient('../../img/about_us/rockandrope_at_work2.jpg');
+            }
+            & :nth-child(4){
+                @include bg_image_gradient('../../img/about_us/rockandrope_team2.jpg');
+            }
+            & :nth-child(5){
+                @include bg_image_gradient('../../img/about_us/rockandrope_team3.jpg');
+            }
+            & :nth-child(6){
+                @include bg_image_gradient('../../img/about_us/rockandrope_at_work3.jpg');
+            }
+        }
+        &__team_image {
+            background-blend-mode: color-burn;
+            background-size: cover;
+            border-image-width: 0;
+        }
+        &__text {
+            grid-area: right;
+            text-align: justify;
+            width: 100%;
+            padding: 7.25rem 8.5rem;
+            display: grid;
+            justify-items: center;
+            position: relative;
+            background-color: $color-white;
+            
+            @include water_mark_logo;
+        }
+    }
+}

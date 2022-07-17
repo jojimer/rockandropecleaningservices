@@ -1,0 +1,44 @@
+.footer {
+    height: 60rem;
+    width: 100%;
+    background-color: $color-black;
+    position: relative;
+
+    &-contacts {
+        padding: 6rem 0;
+        &__main {
+            margin-bottom: 5rem;
+        }
+        &__sub {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 2.5rem;
+
+            ul {
+                width: fit-content;
+                &:first-child {
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        background-color: $color-primary-dark;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 7.5rem;
+
+        small {
+            font-family: 'Roboto', sans-serif;
+            color: $color-white;
+            font-size: 1.6rem;
+            padding: 3.75rem 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+            line-height: 0;
+        }
+    }
+}

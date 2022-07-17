@@ -1,0 +1,34 @@
+// COLORS
+$color-primary: #FF7F24;
+$color-primary-light: #f37822;
+$color-primary-dark: #5c3913;
+
+// $color-secondary-light: #ffb900;
+// $color-secondary-dark: #ff7730;
+
+// $color-tertiary-light: #2998ff;
+// $color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #080808;
+
+
+// FONT
+$default-font-size: 1.8rem;
+
+
+// GRID
+$grid-width: 144rem - (7.2rem * 2);
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// Gradient
+$bg_image_gradient: linear-gradient( to bottom right,rgba($color-primary, 0.2) 20%,rgba($color-primary-dark, 0.2));
