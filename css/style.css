@@ -437,7 +437,7 @@ body {
     grid-area: left-bottom; }
   .overview-grids__image {
     grid-area: right;
-    background-image: url(../../img/1000H.png);
+    background-image: url(../img/1000H.png);
     background-size: cover; }
   .overview-grids:not(:last-child) {
     height: 55rem;
