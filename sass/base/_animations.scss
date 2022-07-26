@@ -1,0 +1,10 @@
+@keyframes scaleText {
+    0% {
+        right: -11rem;
+        transform: scale(1.05);
+    }
+    100% {
+        right: -10.5rem;
+        transform: scale(1.125);
+    }
+}

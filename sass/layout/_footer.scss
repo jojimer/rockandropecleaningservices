@@ -4,20 +4,40 @@
     background-color: $color-black;
     position: relative;
 
+    @include respond(small-desktop) {
+        height: 56rem;
+    }
+
     &-contacts {
         padding: 6rem 0;
         &__main {
             margin-bottom: 5rem;
+
+            h4 {
+                @include respond(small-desktop) {
+                    font-size: 9em;
+                }
+            }
         }
         &__sub {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            padding: 0 2.5rem;
+            padding: 0 2.5rem;            
 
             ul {
                 width: fit-content;
+                list-style-type: none;
+                line-height: 7rem;
                 &:first-child {
                     grid-column: span 2;
+                }
+
+                a, strong {
+                    text-transform: uppercase;
+                }
+
+                @include respond(small-desktop) {
+                    line-height: 6rem;
                 }
             }
         }
@@ -39,6 +59,10 @@
             font-weight: 700;
             display: block;
             line-height: 0;
+
+            @include respond(medium-desktop) {
+                padding: 2.8rem 0;
+            }
         }
     }
 }

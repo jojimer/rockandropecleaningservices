@@ -1,9 +1,14 @@
 .hero {
+    margin-top: 15rem;
     height: 80rem;
     background-image:  linear-gradient( to right,rgba($color-primary-dark, 0.5) 40%,rgba($color-black, 0)), url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+
+    @include respond(small-desktop) {
+        height: 65rem;
+    }
 
     &-wrap {
         display: flex;
@@ -14,5 +19,9 @@
 
     &-text {
         position: relative;
+        @include respond(small-desktop) {
+            font-size: 8.5rem;
+            line-height: 9rem;
+        }
     }
 }

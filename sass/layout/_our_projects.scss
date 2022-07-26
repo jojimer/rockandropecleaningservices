@@ -4,21 +4,36 @@
     padding: 8rem 0;
     position: relative;
 
+    @include respond(small-desktop) {
+        padding: 5rem 0;
+    }
+
     .secondary-title {
         margin-bottom: 8rem;
+
+        @include respond(small-desktop) {
+            margin-bottom: 5.5rem;
+        }
     }
 
     &-lists {
-        list-style-type: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         margin-bottom: 5rem;
         cursor: pointer;
 
-        &>li:not(:last-child) {
-            margin-right: 4rem;
+        select {
+            border: 0;
+            border-bottom: 1px solid rgba($color-black, 0.25);
+            padding-bottom: 0.5rem;
+            cursor: pointer;
+
+            &:focus-visible {
+                outline: none;
+            }
         }
+
     }
 
     &-galleries{
@@ -34,6 +49,11 @@
         background-size: cover;
         background-position: center;
         position: relative;
+        transition: 500ms;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         &:after {
             content: "";

@@ -12,11 +12,11 @@
 </head>
 <body>
     <!-- Header -->
-    <header id="home" class="header">
+    <header class="header">
         <div class="header-info">
             <div class="row">
                 <div class="col-1-of-2"> Phone: (046) 489 7866  /  Mobile No.: (0905) 254 4677 </div>
-                <div class="col-1-of-2 u-right-text"> Email: rockandropecleans@yahoo.com </div>
+                <div class="col-1-of-2 u-right-text"> Email: <a href="mailto:rockandropecleans@yahoo.com">rockandropecleans@yahoo.com</a></div>
             </div>
         </div>
         <div class="header-main row">
@@ -30,14 +30,14 @@
                             <li><a href="#about">ABOUT</a></li>
                             <li><a href="#services">SERVICES</a></li>
                             <li><a href="#our_projects">OUR PROJECTS</a></li>
-                            <li class="btn-get-quote"><a href="#get_a_quote">GET A QUOTE</a></li>
+                            <li class="btn--get-quote"><a class="get_quote" href="#get_a_quote">GET A QUOTE</a></li>
                         </ul>
                     </nav>
                 </div>
         </div>
     </header>
     <!-- Hero -->
-    <section class="hero">
+    <section  id="home" class="hero">
         <div class="row hero-wrap">
             <h1 class="hero-text col-3-of-4">
                 <span>Making</span>
@@ -103,6 +103,7 @@
                 <li>Rectification Works</li>
                 <li>Building Inspection</li>
                 <li>Repair and Maintenance</li>
+                <li>Rope Access Services</li>    
             </ul>
         </div>
     </section>
@@ -110,13 +111,23 @@
     <section class="our_projects" id="our_projects">
         <div class="row">
             <h3 class="secondary-title">Our Projects</h3>
-            <ul class="our_projects-lists">
+            <!-- <ul class="our_projects-lists">
                 <li class="active">Cleaning Services</li>
                 <li>PAINT AND SEALANT JOB</li>
                 <li>RECTIFICATION WORKS</li>
                 <li>BUILDING INSPECTION</li>
                 <li>REPAIR AND MAINTENANCE</li>
-            </ul>
+            </ul> -->
+            <div class="our_projects-lists">
+                <select name="project_filter">
+                    <option value="CleaningServices">Cleaning Services</option>
+                    <option value="PaintAndSealantJob">Paint And Sealant Job</option>
+                    <option value="RectificationWorks">Rectification Works</option>
+                    <option value="BuildingInspection">Building Inspection</option>
+                    <option value="RepairAndMaintenance">Repair And Maintenance</option>
+                    <option value="RopeAccessServices">Rope Access Services</option>
+                </select>
+            </div>
             <div id="galleries" class="our_projects-galleries">
             </div>
         </div>
@@ -130,8 +141,8 @@
             <div class="footer-contacts__sub">
                 <ul>
                     <li>Mobile No.: <strong>(0905) 254 4677</strong></li>
-                    <li>Email: <strong>rockandropecleans@yahoo.com</strong></li>
-                    <li>Facebook: <strong>fb.com/RockAndRopeCleaningServices</strong></li>
+                    <li>Email: <strong><a href="mailto:rockandropecleans@yahoo.com">rockandropecleans@yahoo.com</a></strong></li>
+                    <li>Facebook: <strong><a href="https://fb.com/RockAndRopeCleaningServices">fb.com/RockAndRopeCleaningServices</a></strong></li>
                 </ul>
                 <ul>
                     <li>Address:</li>
@@ -162,6 +173,41 @@
             <div class="img-list"></div>
             <div class="title"></div>
           </div>
+    </div>
+    <div class="form" style="display:none;">
+        <div class="form-container">
+            <h3 class="form-title">Get A Quote</h3>
+            <form class="form-get-quote" action="" method="post">
+                <div class="form-row">
+                    <div class="form-input-wrap">
+                        <label for="fullname">Fullname:</label>
+                        <input required type="text" name="fullname">
+                    </div>
+                    <div class="form-input-wrap">
+                        <label for="company name">Company Name:</label>
+                        <input required type="text" name="company_name">
+                    </div> 
+                </div>
+                <div class="form-row">
+                    <div class="form-input-wrap">
+                        <label for="email">Email:</label>
+                        <input required type="email" name="email">
+                    </div>
+                    <div class="form-input-wrap">
+                        <label for="contact-number">Contact Number:</label>
+                        <input required type="text" pattern="^[0-9]*$" name="contact_number" placeholder="09XXXXXXXXX">
+                    </div> 
+                </div>
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea required name="message" cols="30" rows="8"></textarea>
+                </div>
+                <input type="submit" value="Request Quote">
+            </form>
+            <svg class="form-close" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0.625C9.29688 0.625 0.625 9.29688 0.625 20C0.625 30.7031 9.29688 39.375 20 39.375C30.7031 39.375 39.375 30.7031 39.375 20C39.375 9.29688 30.7031 0.625 20 0.625ZM20 35.625C11.3672 35.625 4.375 28.6328 4.375 20C4.375 11.3672 11.3672 4.375 20 4.375C28.6328 4.375 35.625 11.3672 35.625 20C35.625 28.6328 28.6328 35.625 20 35.625ZM27.9531 15.1406L23.0938 20L27.9531 24.8594C28.3203 25.2266 28.3203 25.8203 27.9531 26.1875L26.1875 27.9531C25.8203 28.3203 25.2266 28.3203 24.8594 27.9531L20 23.0938L15.1406 27.9531C14.7734 28.3203 14.1797 28.3203 13.8125 27.9531L12.0469 26.1875C11.6797 25.8203 11.6797 25.2266 12.0469 24.8594L16.9062 20L12.0469 15.1406C11.6797 14.7734 11.6797 14.1797 12.0469 13.8125L13.8125 12.0469C14.1797 11.6797 14.7734 11.6797 15.1406 12.0469L20 16.9062L24.8594 12.0469C25.2266 11.6797 25.8203 11.6797 26.1875 12.0469L27.9531 13.8125C28.3203 14.1797 28.3203 14.7734 27.9531 15.1406Z" fill="#5C3913"/>
+                </svg>
+        </div>
     </div>
     <script src="./app.js"></script>
 </body>

@@ -30,4 +30,10 @@
     background-color: $color-primary;
     padding: 1rem;
     font-size: 3.5rem;
+
+    @include scale-up(1.15,1);
+}
+
+.d-none {
+    display: none !important;
 }

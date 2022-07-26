@@ -10,6 +10,7 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
     background-color: $color-grey-light-1;
+    scroll-behavior: smooth;
 
     @include respond(tab-land) { // width < 1200?
         font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
@@ -33,6 +34,11 @@ body {
     @include respond(tab-port) {
         padding: 0;
     }
+}
+
+a:link, a:visited, a:focus {
+    color: $color-white;
+    text-decoration: none;
 }
 
 ::selection {

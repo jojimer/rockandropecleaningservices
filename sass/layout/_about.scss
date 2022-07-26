@@ -14,6 +14,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-auto-rows: minmax(33rem, auto);
+            overflow: hidden;
 
             & :nth-child(1){
                 @include bg_image_gradient('../img/about_us/rockandrope_team1.jpg');
@@ -38,6 +39,8 @@
             background-blend-mode: color-burn;
             background-size: cover;
             border-image-width: 0;
+            width: -webkit-fill-available;
+            @include scale-up(1.1,1);
         }
         &__text {
             grid-area: right;
@@ -48,6 +51,14 @@
             justify-items: center;
             position: relative;
             background-color: $color-white;
+
+            @include respond(medium-desktop) {
+                padding: 5.25rem;
+            }
+
+            @include respond(small-desktop) {
+                padding: 3.5rem 4.5rem;
+            }
             
             @include water_mark_logo;
         }

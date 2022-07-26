@@ -24,14 +24,24 @@
             }
         }
 
-        .btn-get-quote {
+        .btn--get-quote {
             text-align: center;
+            cursor: pointer;
+            transition: 250ms;
 
             a {
                 font-family: 'Lexend Deca', sans-serif;
                 font-weight: 900;
                 letter-spacing: -0.7;
                 font-size: 2rem;
+            }
+
+            &:hover {
+                animation-name: scaleText;
+                animation-duration: 400ms;
+                animation-timing-function: ease;
+                right: -10.5rem;
+                transform: scale(1.1);
             }
         } 
     }
@@ -82,6 +92,10 @@
         &:not(:last-child) {
             > *:not(p) {
                 margin-bottom: 1.75rem;
+
+                @include respond(small-desktop) {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -110,6 +124,10 @@
     padding-bottom: 0.5rem;
     margin-bottom: 5rem;
     width: fit-content;
+
+    @include respond(small-desktop) {
+        margin-bottom: 3rem;
+    }
 }
 
 .about-grids__text p {
@@ -139,6 +157,10 @@
             transform: translateX(12.5rem);
             display: inline-block;
         }
+
+        @include respond(small-desktop) {
+            font-size: 28.5rem;
+        }
     }
 
     &-content {        
@@ -148,6 +170,15 @@
             font-size: 31rem;                       
             letter-spacing: -3.5rem;
             transform: scaleY(1.15) translate(-3rem, 1.3rem);
+
+            @include respond(medium-desktop) {
+                font-size: 28.2rem;
+            }
+
+            @include respond(small-desktop) {
+                font-size: 25.7rem;
+                transform: scaleY(1.15) translate(-2.75rem, 1.3rem);
+            }
             
             span:not(:last-child) {
                 letter-spacing: -5rem;
@@ -168,15 +199,16 @@
 }
 
 .our_projects {
-    &-lists {
-        font-size: 1.8rem;
+    &-lists select {
+        font-size: 2rem;
         font-family: 'Roboto', sans-serif;
-        text-transform: uppercase;
+        letter-spacing: 0.5rem;
         color: $color-primary-dark;
-        font-weight: 900;
+        font-weight: 300;
 
-        .active {
-            color: $color-primary;
+        option {
+            color: $color-black;
+            font-size: 1.25rem;
         }
     }
 }
@@ -200,14 +232,57 @@
         font-family: 'Roboto', sans-serif;
         line-height: 7rem;
         letter-spacing: 1.25;
-        font-size: 2.6rem;
+        font-size: 2.3rem;
 
-        ul {
-            list-style-type: none;
-
-            li {
-                font-weight: 300;
-            }
+        @include respond(medium-desktop) {
+            padding: 0 7.5rem;
+            font-size: 2rem;
         }
+
+        @include respond(small-desktop) {
+            padding: 0 7.5rem;
+            font-size: 1.7rem;
+        }
+
+        li {
+            font-weight: 300;
+        }
+    }
+}
+
+.form {
+    &-title {
+        font-size: 3rem;
+        font-family: 'Lexend Deca', sans-serif;
+        color: $color-primary;
+    }
+
+    label, input, textarea {
+        font-family: 'Roboto', sans-serif;        
+    }
+
+    label {
+        font-size: 1.25rem;
+        color: $color-primary-dark;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    input:not([type=submit]), textarea {
+        font-size: 1.5rem;
+        font-weight: 300;
+        overflow: hidden;
+    }
+
+    input[type=submit]{
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+        background-color: $color-primary;
+        color: $color-white;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
     }
 }

@@ -4,12 +4,28 @@
     position: relative;
     overflow: hidden;
 
+    @include respond(small-desktop) {
+        height: 85rem;
+    }
+
     &__shadow_title_wrap {
         background-color: $color-primary;
         height: 100%;
         width: 100%;
         position: relative;
         clip-path: polygon(0 100%, 48% 100%, 97.1% 0, 0 0);
+
+        @include respond(big-desktop) {
+            clip-path: polygon(0 100%, 47.75% 100%, 97.05% 0, 0 0);
+        }
+
+        @include respond(medium-desktop) {
+            clip-path: polygon(0 100%, 43.15% 100%, 97.95% 0, 0 0);
+        }
+
+        @include respond(small-desktop) {
+            clip-path: polygon(0 100%, 43.15% 100%, 97.95% 0, 0 0);
+        }
     }
 
     &__shadow_title {
@@ -25,8 +41,15 @@
         display: grid;
         grid-template-columns: repeat(5,1fr);
 
+        @include respond(small-desktop) {
+            grid-template-columns: repeat(8,1fr);
+        }
+
         &-title {
             grid-column: span 5;
+            @include respond(small-desktop) {
+                grid-column: span 8;
+            }
         }
         &-list {
             grid-column: span 3;
@@ -37,6 +60,13 @@
             display: flex;
             flex-wrap: wrap;
             align-content: end;
+
+            @include respond(small-desktop) {
+                grid-column: span 5;
+                grid-column-end: -3;
+                width: 60rem;
+                font-size: 2.75rem;
+            }
         }
     }
 

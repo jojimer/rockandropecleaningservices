@@ -1,0 +1,83 @@
+.form {
+    position: fixed;
+    opacity: 1;
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba($color-black, 0.75);
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    &-container {
+        background-color: $color-white;
+        width: 50vw;
+        height: 70vh;
+        transform: translateY(-60vh);
+        border-radius: 1rem;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &-title {
+        padding: 2rem;
+    }
+
+    &-get-quote {
+        align-self: start;
+        text-align: right;
+        padding: 0 3rem 3rem;
+    }
+
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &:nth-child(3)>label {
+            margin-left: 0.5rem;
+        }
+    }
+
+    &-input-wrap {
+        text-align: left;
+        padding: 1rem 0.5rem;
+
+        label, input {
+            display: block;
+            width: 20vw;
+        }        
+    }
+
+    textarea {
+        width: 100%;
+        margin: 0 0.5rem 1.5rem;        
+    }
+    input, textarea {
+        border: 1px solid rgba($color-black, 0.25);
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        &:focus-visible {
+            outline-color: rgba($color-primary-dark, 0.5);
+        }
+    }
+    .form-input-wrap:first-child input{
+        margin-right: 1rem;        
+    }
+
+    svg {
+        position: absolute;
+        top: -0.75rem;
+        right: -1rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

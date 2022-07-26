@@ -129,3 +129,78 @@ $(document).on('click','.img-list-choices',function(){
         $('.arrowl').css('display', 'block');
     }
 })
+
+// Show Get Quote Form
+$(document).on('click','.btn--get-quote',function(){
+    $('div.form').fadeIn(500);
+});
+
+// Close Get Quote Form
+$(document).on('click','div.form, div.form svg',function(e){
+    if(e.target.className === 'form' || e.target.className.baseVal === 'form-close') $('div.form').fadeOut(250);
+});
+
+// Active Navigation Link
+const changedActiveLink = function(e,link){
+    $('.header-main-navigation__wrap a').removeClass('active');
+    if(e !== 'get_quote') $(link).addClass('active');
+}
+
+$(document).on('click','.header-main-navigation__wrap a',function(e){
+    changedActiveLink(e.target.className,this);
+});
+
+let scrollPosition = 0;
+
+$(window).scroll(function (e) {
+    scrollPosition = $(window).scrollTop();
+    let header = $('.header');
+
+    // Header Visibility
+    if(scrollPosition < header.height()){
+        header.css('opacity',1);
+    }else{
+        header.css('opacity',0);
+    }
+
+    // Active Navigation Link
+    const body = $('body').height();
+    const home = $('.hero').height();
+    const overview = $('.overview').height();
+    const about = $('.about').height();
+    const services = $('.services').height();
+    const our_projects = $('.our_projects').height();
+    const footer = $('.footer').height();
+
+    // About
+    if(body - (home+overview+services+our_projects+about+footer-300) > scrollPosition) {
+        changedActiveLink('scroll','.header-main-navigation__wrap li:nth(0) a');
+    }
+
+    // About
+    if(body - (services+our_projects+about+footer+300) < scrollPosition) {
+        changedActiveLink('scroll','.header-main-navigation__wrap li:nth(1) a');
+    }
+    
+    // Services
+    if(body - (services+our_projects+footer+300) < scrollPosition) {
+        changedActiveLink('scroll','.header-main-navigation__wrap li:nth(2) a');
+    }
+
+    // Projects
+    if(body - (our_projects+footer+300) < scrollPosition) {
+        changedActiveLink('scroll','.header-main-navigation__wrap li:nth(3) a');
+    }
+
+
+});
+
+// Arrow-Up
+$(document).on('click','.arrow-up',function(e){
+    e.preventDefault();
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+      });
+});
