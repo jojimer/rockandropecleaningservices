@@ -1,24 +1,57 @@
 const projects = {
-    cleaningServices: [
-        { folder_name: "alphaland", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
-        { folder_name: "Araneta", images: ["1.jpg","2.jpg","3.jpg"] },
-        { folder_name: "Bellevue", images: ["1.jpg","2.jpg","3.webp","4.webp"] },
-        { folder_name: "CrimsonEntrata", images: ["1.webp","2.webp","3.webp","4.webp"] },
-        { folder_name: "DLS_Benilde", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg"] },
-        { folder_name: "Gateway", images: ["1.jpg","2.jpg","3.jpg","4.webp"] },
-        { folder_name: "Manulife", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"] },
-        { folder_name: "MedicalCity", images: ["1.webp","2.webp","3.jpg","4.webp","5.jpg"] },
-        { folder_name: "RCBC_BGC", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
-        { folder_name: "SM_Aura", images: ["1.webp","2.jpg","3.jpg"] }
-    ]
+    cleaningServices: {
+        service_name: "Cleaning Services",
+        img: [
+            { folder_name: "alphaland", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
+            { folder_name: "Araneta", images: ["1.jpg","2.jpg","3.jpg"] },
+            { folder_name: "Bellevue", images: ["1.jpg","2.jpg","3.webp","4.webp"] },
+            { folder_name: "CrimsonEntrata", images: ["1.webp","2.webp","3.webp","4.webp"] },
+            { folder_name: "DLS_Benilde", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg"] },
+            { folder_name: "Gateway", images: ["1.jpg","2.jpg","3.jpg","4.webp"] },
+            { folder_name: "Manulife", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"] },
+            { folder_name: "MedicalCity", images: ["1.webp","2.webp","3.jpg","4.webp","5.jpg"] },
+            { folder_name: "RCBC_BGC", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
+            { folder_name: "SM_Aura", images: ["1.webp","2.jpg","3.jpg"] }
+        ]
+    },
+    paintAndSealantJob: {
+        service_name: "Paint And Sealant Job",
+        img: [
+            { folder_name: "bgc_project", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg"] },
+            { folder_name: "davao_project", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
+        ]
+    },
+    repairAndMaintenance: {
+        service_name: "Repair And Maintenance",
+        img: [
+            { folder_name: "rockwell_project", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"] },
+        ]
+    },
+    rectificationWorks: {
+        service_name: "Rectification Works",
+        img: [
+            { folder_name: "highStreetBGC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"] },
+            { folder_name: "picadillyStar", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
+        ]
+    },
+    buildingInspection: {
+        service_name: "Building Inspection",
+        img: [
+            { folder_name: "waterLeakTest", images: ["1.jpg","2.jpg","3.jpg"] },
+        ]
+    }
 }
 
+// Get All Project Keys
+const projectKey = Object.keys(projects).map(key => key);
 const galleries = document.getElementById('galleries');
+const gallerySelector = document.getElementById('project_filter');
 const style = "linear-gradient( to bottom right,rgba(255,127,36, 0.2) 20%, rgba(92,57,19, 0.2)),";
 const initGallery = (e) => {
     const i = e.target.getAttribute("data-index");
-    const project = projects.cleaningServices[i];
-    const src = `./img/${project.folder_name}/`;
+    const key = e.target.getAttribute("data-project");
+    const project = projects[key].img[i];
+    const src = `./img/${key}/${project.folder_name}/`;
     let images = "";
     $('.gallery-image-lightbox').fadeIn(300);
     $('.gallery-image-lightbox').addClass('active');
@@ -32,6 +65,11 @@ const initGallery = (e) => {
     $('html').css('overflow', 'hidden');
     $('.arrowr').css('display', 'block');
     $('.arrowl').css('display', 'none');
+}
+
+const changeGallery = (key) => {
+    $('.our_projects-gallery').fadeOut(1);
+    $(`.our_projects-gallery[data-project=${key}]`).fadeIn(750);
 }
 
 const moveRight = () => {
@@ -68,16 +106,30 @@ const moveLeft = () => {
     }
 }
 
-projects.cleaningServices.map((v,i) => {
-    const galleryElement = document.createElement('div');
-    const src = `./img/${v.folder_name}/${v.images[0]}`;
-    galleryElement.classList = "our_projects-gallery";
-    galleryElement.setAttribute('data-index',i);
-    galleryElement.style.backgroundImage = style+` url(${src})`;
-    galleryElement.addEventListener('click',initGallery);
-    galleries.appendChild(galleryElement);
-})
+// Create Gallery Preview
+projectKey.map((key,i) => {
+    projects[key].img.map((v,index) => {
+        const galleryElement = document.createElement('div');
+        const src = `./img/${key}/${v.folder_name}/${v.images[0]}`;
+        galleryElement.classList = "our_projects-gallery";
+        galleryElement.setAttribute('data-index',index);
+        galleryElement.setAttribute('data-project',key);
+        if(i !== 0) galleryElement.style.display = "none";
+        galleryElement.style.backgroundImage = style+` url(${src})`;
+        galleryElement.addEventListener('click',initGallery);
+        galleries.appendChild(galleryElement);
+    })
 
+    const optionElement = document.createElement('option');
+    optionElement.setAttribute('value',key);
+    optionElement.innerHTML = projects[key].service_name;    
+    gallerySelector.appendChild(optionElement);
+});
+
+//gallerySelector.addEventListener('change',changeGallery);
+$(document).on('change','#project_filter',function(){
+    changeGallery(this.value);
+});
 
 // Gallery Script
 $(document).on('click','.gallery-image-lightbox .close',function() {
