@@ -1,7 +1,7 @@
 .form {
     position: fixed;
     opacity: 1;
-    width: 100vw;
+    width: 100%;
     height: 100vw;
     background-color: rgba($color-black, 0.75);
     top: 0;
@@ -18,14 +18,21 @@
 
     &-container {
         background-color: $color-white;
-        width: 50vw;
-        transform: translateY(25%);
+        width: 50%;
+        transform: translateY(45vh);
+        top: -25vh;
+        position: relative;
         border-radius: 1rem;
         display: grid;
         grid-template-rows: 1fr 3fr;
         grid-template-columns: 1fr;
         align-items: center;
         justify-items: center;
+
+        @include respond(tab-port) {
+            transform: translateY(75vh);
+            top: -50vh;
+        }
     }
 
     &-title {

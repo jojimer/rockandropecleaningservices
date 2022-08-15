@@ -54,6 +54,18 @@
                 margin-bottom: 0!important;
             }
         }
+
+        @include respond(phone) {
+            padding: 0.5rem 0;
+            div.col-1-of-2 {
+                width: 100% !important;
+                text-align: center!important;
+                
+                &:first-child {
+                    margin-bottom: 0.75rem !important;
+                }
+            }
+        }
     }
 
     &-main {

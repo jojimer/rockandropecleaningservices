@@ -91,6 +91,28 @@
             &::before { top: -.8rem; }
             &::after { top: .8rem; }
         }
+
+        &__button:hover &__icon::before {
+            top: -1rem;
+        }
+    
+        &__button:hover &__icon::after {
+            top: 1rem;
+        }
+    
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+    
+        &__checkbox:checked + &__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+    
+        &__checkbox:checked + &__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
     
         &__nav {
             height: 100vh;
@@ -171,14 +193,14 @@
 
     &__button {
         @include respond(phone) {
-            top: 3rem;
+            top: 8.5rem;
             right: 3rem;
         }
     }
 
     &__background {
         @include respond(phone) {
-            top: 3.5rem;
+            top: 8.5rem;
             right: 3.5rem;
         }
     }

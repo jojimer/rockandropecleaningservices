@@ -17,6 +17,15 @@
         grid-auto-rows: minmax(51rem, auto);
     }
 
+    @include respond(phone) {
+        grid-template-areas:
+            "left-top right"
+            "left-bottom right"
+            "left bottom"
+        ;
+        grid-template-columns: 1fr;
+    }
+
     &-grids {
         &__what_we_do {
             background-color: $color-primary;
@@ -31,6 +40,12 @@
             background-image: url(../img/1000H.png);
             background-size: cover;
             @include scale-up(1.05,0);
+
+            @include respond(phone) {
+                grid-area: left;
+                width: 100%;
+                height: 220vw;
+            }
         }
         &:not(:last-child) {
             padding: 6.5rem 12.75rem;

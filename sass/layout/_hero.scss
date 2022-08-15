@@ -17,6 +17,15 @@
         background-position-x: -10rem;
     }
 
+    @include respond(phone) {
+        background-position-x: 100%;
+        background-position-y: 6rem;
+        height: 68rem;
+        background-blend-mode: hue;
+        background-color: rgba($color-primary-dark, 0.3);
+        background-image: url('../img/rectificationWorks/highStreetBGC/1.jpg');
+    }
+
     &-wrap {
         display: flex;
         height: 100%;
@@ -35,6 +44,21 @@
             font-size: 7rem;
             line-height: 8rem;
             margin-top: 7.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 6.5rem;
+            margin-left: 0;
+            margin-top: 12.5rem;
+
+            span {
+                transform: translateX(0);
+                letter-spacing: 0.15rem;
+
+                &:not(:last-child) {
+                    transform: translateX(0);
+                }
+            }
         }
     }
 }

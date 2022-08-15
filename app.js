@@ -30,7 +30,7 @@ const projects = {
     rectificationWorks: {
         service_name: "Rectification Works",
         img: [
-            { folder_name: "highStreetBGC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"] },
+            { folder_name: "highStreetBGC", images: ["1.jpg","2.jpg","3.jpg"] },
             { folder_name: "picadillyStar", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
         ]
     },
@@ -195,14 +195,14 @@ $(document).on('click','div.form, div.form svg',function(e){
 // Active Navigation Link
 const changedActiveLink = function(e,link){
     $('.navigation__wrap a').removeClass('active');
-    if(e !== 'get_quote') $(link).addClass('active');
+    if(e !== '#get_a_quote') $(link).addClass('active');
     const checkBoxes = $('#navi-toggle');
     checkBoxes.prop("checked", false);
 }
 
 $(document).on('click','.navigation__wrap a',function(e){
     $('.navigation__wrap a').removeClass('active');
-    changedActiveLink(e.target.className,this);
+    changedActiveLink(e.target.hash,this);
 });
 
 let scrollPosition = 0;

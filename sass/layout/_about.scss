@@ -13,6 +13,11 @@
         grid-template-columns: 1fr;
     }
 
+    @include respond(phone) {
+        transform: translateY(-215vw);
+        height: 0;
+    }
+
     &-grids {
         &__images {
             grid-area: left;
@@ -67,6 +72,17 @@
 
             @include respond(small-desktop) {
                 padding: 3.5rem 4.5rem;
+            }
+
+            @include respond(phone) {
+                margin: 3rem auto;
+                width: 90%;
+                height: max-content;
+                padding: 3rem;
+                
+                p {
+                    font-size: 3vw;
+                }
             }
             
             @include water_mark_logo;
