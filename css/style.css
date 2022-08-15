@@ -1082,9 +1082,8 @@ a:link, a:visited, a:focus {
           font-size: 5rem;
           transform: unset;
           letter-spacing: 2rem !important;
-          text-align: right;
-          margin: 3rem auto 2rem;
-          width: 80%; }
+          text-align: center;
+          margin: 3rem auto 2rem; }
           .services-content-title span {
             letter-spacing: 2rem !important;
             transform: unset !important; } }
