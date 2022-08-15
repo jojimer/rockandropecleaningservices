@@ -505,7 +505,7 @@ a:link, a:visited, a:focus {
     @media only screen and (max-width: 37.5em) {
       .form-container {
         width: 80%;
-        top: -65%;
+        top: -70%;
         grid-template-rows: 1fr; } }
   .form-title {
     padding: 2rem; }
