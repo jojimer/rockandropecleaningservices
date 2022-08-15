@@ -1,5 +1,8 @@
 .hero {
-    margin-top: 15rem;
+    @include respond(tab-port-up) {
+        margin-top: 15rem;
+    }
+
     height: 80rem;
     background-image:  linear-gradient( to right,rgba($color-primary-dark, 0.5) 40%,rgba($color-black, 0)), url(../img/hero.jpg);
     background-repeat: no-repeat;
@@ -8,6 +11,10 @@
 
     @include respond(small-desktop) {
         height: 65rem;
+    }
+
+    @include respond(tab-port) {
+        background-position-x: -10rem;
     }
 
     &-wrap {
@@ -22,6 +29,12 @@
         @include respond(small-desktop) {
             font-size: 8.5rem;
             line-height: 9rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 7rem;
+            line-height: 8rem;
+            margin-top: 7.5rem;
         }
     }
 }

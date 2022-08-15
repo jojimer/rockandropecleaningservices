@@ -9,6 +9,14 @@
         "left-bottom right"
     ;
 
+    @include respond(tab-port) {
+        svg {
+            width: 8rem;
+            height: 8rem;
+        }
+        grid-auto-rows: minmax(51rem, auto);
+    }
+
     &-grids {
         &__what_we_do {
             background-color: $color-primary;
@@ -38,6 +46,10 @@
             @include respond(small-desktop) {
                 padding: 6.5rem 6.75rem;
             }
-        }  
+
+            @include respond(tab-port) {
+                padding: 4.5rem 4.75rem;
+            }
+        }
     }    
 }

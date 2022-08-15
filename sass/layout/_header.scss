@@ -1,5 +1,8 @@
 .header {  
-    background-color: $color-white;
+    @include respond(tab-port-up) {
+        background-color: $color-white;
+    }
+    
     position: fixed;
     top: 0;
     transform: translateX(-50%);
@@ -15,56 +18,66 @@
     @include respond(medium-desktop) {
         width: 100%;
     }
+
+    @include respond(tab-port) {
+        opacity: 1 !important;
+
+        &.invisible {
+            .header-info,
+            .header-main--logo__wrap {
+                opacity: 0 !important;
+                display: none;
+            }
+
+            .navigation__button {
+                top: 3rem !important;
+                right: 3rem !important;
+            }
+
+            .navigation__background {
+                top: 3.5rem !important;
+                right: 3.5rem !important;
+            }
+        }
+
+        
+    }
     
     &-info {
         background-color: $color-black;
         padding: 1.4rem 0;        
+        transition: 500ms;
+
+        @include respond(tab-port) {
+            div.col-1-of-2 {
+                width: 50% !important;
+                margin-bottom: 0!important;
+            }
+        }
     }
 
     &-main {
         padding: 1rem 0;
         overflow: hidden;
 
+        @include respond(tab-port) {
+            &>div {
+                margin-bottom: 0 !important;
+            }
+        }
+
         &--logo__wrap {
             max-width: 33rem;
             position: relative;
+            transition: 500ms;
         }
     
         &__logo {        
             display: inline-block;
             width: 100%;
-        }
 
-        & .u-right-text {
-            float: right !important;
-        }
-    
-        &-navigation {     
-            &__wrap {
-                list-style: none;
-                display: flex;
-                justify-content: end;
-                height: 8.5rem;
-                align-items: center;
-                position: relative;
-                flex-wrap: wrap;
-                right: 11rem;
-
-                li { 
-                    &.btn--get-quote {
-                        width: 11.5rem;
-                        padding: 2.5rem 0;
-                        background-color: $color-primary;
-                        border: 5px solid rgba($color-primary-dark, 0.075);
-                        position: absolute;
-                        right: -11rem;
-                        top: -1rem;
-                    }
-
-                    &:not(:last-child) {
-                        margin-right: 4rem;
-                    }
-                }
+            @include respond(tab-port) {
+                width: 25rem;
             }
         }
     }

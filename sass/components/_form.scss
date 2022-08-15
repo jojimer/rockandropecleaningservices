@@ -10,13 +10,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    align-content: baseline;
+
+    @include respond(tab-land) {
+        height: 150vh;
+    }
 
     &-container {
         background-color: $color-white;
         width: 50vw;
-        height: 70vh;
-        transform: translateY(-60vh);
+        transform: translateY(25%);
         border-radius: 1rem;
         display: grid;
         grid-template-rows: 1fr 3fr;
@@ -79,5 +82,9 @@
         background-color: $color-white;
         border-radius: 50%;
         cursor: pointer;
+        @include respond(tab-port) {
+            height: 3rem;
+            width: 3rem;
+        }
     }
 }

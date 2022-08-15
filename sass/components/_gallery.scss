@@ -33,6 +33,10 @@
         position: absolute;
         bottom: 0;
 
+        @include respond(tab-port) {
+            grid-template-columns: repeat(6,1fr);
+        }
+
         &-choices {
             height: 12vh;
             width: 100%;
@@ -47,6 +51,10 @@
             &:not(.active):hover {
                 filter: opacity(0.8);
             }
+
+            @include respond(tab-port) {
+                height: 8vh;
+            }
         }
     }
 
@@ -59,6 +67,12 @@
         max-width: calc(55vw - 100px);
         transition: 0.8s cubic-bezier(0.7, 0, 0.4, 1);
         transform-style: preserve-3d;
+
+        @include respond(tab-port) {
+            max-width: 75%;
+            margin: auto;
+            top:50%;
+        }
     }
 
     &:hover img.single-img {
@@ -66,13 +80,17 @@
     }
 
     [class^="arrow"] {
-        height: 200px;
-        width: 50px;
+        height: 20rem;
+        width: 5rem;
         background: rgba(0, 0, 0, 0.4);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
+
+        @include respond(tab-port) {
+            height: 12rem;
+        }
     }
 
     [class^="arrow"]::after {
@@ -81,8 +99,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
-        width: 15px;
-        height: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .arrowr {
@@ -106,11 +124,15 @@
     .close {
         position: absolute;
         right: 0;
-        width: 50px;
-        height: 50px;
+        width: 5rem;
+        height: 5rem;
         background: rgba(0, 0, 0, 0.4);
         margin: 20px;
         cursor: pointer;
+        @include respond(tab-port) {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
     }
 
     .close::after,

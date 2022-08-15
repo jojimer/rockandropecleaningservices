@@ -7,23 +7,28 @@
         font-weight: 700;
         letter-spacing: 1.5;
     }
+}
 
-    &-main-navigation__wrap {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 900;
-        color: $color-black;
-        text-transform: uppercase;
-        font-size: $default-font-size;
+.navigation__wrap {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: $color-black;
+    text-transform: uppercase;
+    font-size: $default-font-size;
 
-        a {
-            text-decoration: none;
-            color: $color-primary-dark;
+    a {
+        text-decoration: none;
+        color: $color-primary-dark;
 
-            &.active {
-                color: $color-primary;
+        &.active {
+            color: $color-primary;
+            @include respond(tab-port) {
+                color: $color-primary-dark;
             }
         }
+    }
 
+    @include respond(tab-port-up) {
         .btn--get-quote {
             text-align: center;
             cursor: pointer;
@@ -101,6 +106,9 @@
 
         h3 {
             font-size: 3.2rem;
+            @include respond(tab-port) {
+                font-size: 2.75rem;
+            }
         }
 
         p {
@@ -127,6 +135,11 @@
 
     @include respond(small-desktop) {
         margin-bottom: 3rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
     }
 }
 
@@ -178,6 +191,10 @@
             @include respond(small-desktop) {
                 font-size: 25.7rem;
                 transform: scaleY(1.15) translate(-2.75rem, 1.3rem);
+            }
+
+            @include respond(tab-port) {
+                font-size: 24.6rem;
             }
             
             span:not(:last-child) {

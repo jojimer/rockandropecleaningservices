@@ -8,6 +8,11 @@
         "left right"
     ;
 
+    @include respond(tab-port) {
+        height: 68rem;
+        grid-template-columns: 1fr;
+    }
+
     &-grids {
         &__images {
             grid-area: left;
@@ -15,6 +20,10 @@
             grid-template-columns: 1fr 1fr;
             grid-auto-rows: minmax(33rem, auto);
             overflow: hidden;
+
+            @include respond(tab-port) {
+                display: none;
+            }
 
             & :nth-child(1){
                 @include bg_image_gradient('../img/about_us/rockandrope_team1.jpg');

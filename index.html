@@ -23,14 +23,21 @@
                 <div class="col-1-of-3 header-main--logo__wrap">
                     <img src="./img/logo.png" alt="Rock And Rope Cleaning Services" class="header-main__logo">
                 </div>
-                <div class="col-2-of-3 u-right-text">
-                    <nav class="header-main-navigation">
-                        <ul class="header-main-navigation__wrap">
-                            <li><a class="active" href="#home">HOME</a></li>
-                            <li><a href="#about">ABOUT</a></li>
-                            <li><a href="#services">SERVICES</a></li>
-                            <li><a href="#our_projects">OUR PROJECTS</a></li>
-                            <li class="btn--get-quote"><a class="get_quote" href="#get_a_quote">GET A QUOTE</a></li>
+                <div class="col-2-of-3 u-right-text navigation">
+                    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+                    <label for="navi-toggle" class="navigation__button">
+                        <span class="navigation__icon">&nbsp;</span>
+                    </label>
+
+                    <div class="navigation__background">&nbsp;</div>
+                    <nav class="navigation__nav">
+                        <ul class="navigation__wrap navigation__list">
+                            <li class="navigation__item"><a class="active navigation__link" href="#home"><span>01</span>HOME</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#about"><span>02</span>ABOUT</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#services"><span>03</span>SERVICES</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#our_projects"><span>04</span>OUR PROJECTS</a></li>
+                            <li class="btn--get-quote navigation__item"><a class="get_quote navigation__link" href="#get_a_quote"><span>05</span>GET A QUOTE</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -101,9 +108,10 @@
                     low-rise, and commercial buildings</li>
                 <li>Paint and Sealant Job</li>
                 <li>Rectification Works</li>
+                <li>Glass Installation</li>
                 <li>Building Inspection</li>
                 <li>Repair and Maintenance</li>
-                <li>Rope Access Services</li>    
+                <li>Rope Access Services</li>
             </ul>
         </div>
     </section>

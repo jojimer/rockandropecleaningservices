@@ -8,14 +8,25 @@
         height: 56rem;
     }
 
+    @include respond(tab-port) {
+        height: 52rem;
+    }
+
     &-contacts {
         padding: 6rem 0;
         &__main {
             margin-bottom: 5rem;
+            @include respond(tab-port) {
+                margin-bottom: 3.5rem;
+            }
 
             h4 {
                 @include respond(small-desktop) {
                     font-size: 9em;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 7em;
                 }
             }
         }
@@ -23,6 +34,11 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             padding: 0 2.5rem;            
+
+            @include respond(tab-port) {
+                padding: 0 3.5rem;
+                grid-template-columns: repeat(8, 1fr);
+            }
 
             ul {
                 width: fit-content;
@@ -38,6 +54,15 @@
 
                 @include respond(small-desktop) {
                     line-height: 6rem;
+                }
+
+                @include respond(tab-port) {
+                    &:first-child {
+                        grid-column: span 5;
+                    }
+                    &:last-child {
+                        grid-column: span 3;
+                    }
                 }
             }
         }
