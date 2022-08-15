@@ -13,7 +13,7 @@
     }
 
     @include respond(phone) {
-        height: 60rem;
+        height: max-content;
     }
 
     &__shadow_title_wrap {
@@ -37,6 +37,8 @@
 
         @include respond(phone) {
             clip-path: polygon(0 100%, 44.15% 100%, 94.95% 0, 0 0);
+            height: -webkit-fill-available;
+            position: absolute;
         }
     }
 
@@ -64,6 +66,7 @@
         @include respond(phone) {
             display: block;
             width: 100%;
+            position: relative;
         }
 
         &-title {
@@ -76,9 +79,9 @@
                 font-size: 5rem;
                 transform: unset;
                 letter-spacing: 2rem !important;
-                text-align: center;
-                margin-top:3rem;
-                margin-bottom: 2rem;
+                text-align: right;
+                margin: 3rem auto 2rem;
+                width: 80%;
 
                 span {
                     letter-spacing: 2rem !important;
@@ -110,9 +113,11 @@
 
             @include respond(phone) {
                 font-size: 2rem;
-                margin: auto;
+                margin: 0 auto 3rem;
                 display: block;
                 width: 65%;
+                height: 100%;
+                padding-left: 1.5rem;
             }
         }
     }

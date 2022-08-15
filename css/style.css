@@ -1030,7 +1030,7 @@ a:link, a:visited, a:focus {
       height: 80rem; } }
   @media only screen and (max-width: 37.5em) {
     .services {
-      height: 60rem; } }
+      height: max-content; } }
   .services__shadow_title_wrap {
     background-color: #FF7F24;
     height: 100%;
@@ -1048,7 +1048,9 @@ a:link, a:visited, a:focus {
         clip-path: polygon(0 100%, 43.15% 100%, 97.95% 0, 0 0); } }
     @media only screen and (max-width: 37.5em) {
       .services__shadow_title_wrap {
-        clip-path: polygon(0 100%, 44.15% 100%, 94.95% 0, 0 0); } }
+        clip-path: polygon(0 100%, 44.15% 100%, 94.95% 0, 0 0);
+        height: -webkit-fill-available;
+        position: absolute; } }
   .services__shadow_title {
     position: absolute;
     left: -4rem;
@@ -1068,7 +1070,8 @@ a:link, a:visited, a:focus {
     @media only screen and (max-width: 37.5em) {
       .services-content {
         display: block;
-        width: 100%; } }
+        width: 100%;
+        position: relative; } }
     .services-content-title {
       grid-column: span 5; }
       @media only screen and (max-width: 64em) {
@@ -1079,9 +1082,9 @@ a:link, a:visited, a:focus {
           font-size: 5rem;
           transform: unset;
           letter-spacing: 2rem !important;
-          text-align: center;
-          margin-top: 3rem;
-          margin-bottom: 2rem; }
+          text-align: right;
+          margin: 3rem auto 2rem;
+          width: 80%; }
           .services-content-title span {
             letter-spacing: 2rem !important;
             transform: unset !important; } }
@@ -1107,9 +1110,11 @@ a:link, a:visited, a:focus {
       @media only screen and (max-width: 37.5em) {
         .services-content-list {
           font-size: 2rem;
-          margin: auto;
+          margin: 0 auto 3rem;
           display: block;
-          width: 65%; } }
+          width: 65%;
+          height: 100%;
+          padding-left: 1.5rem; } }
   .services::after {
     content: "";
     height: 95rem;
