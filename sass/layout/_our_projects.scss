@@ -40,6 +40,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-gallery{
@@ -53,6 +57,10 @@
 
         @include respond(tab-port) {
             height: 21rem;
+        }
+
+        @include respond(phone) {
+            height: 30rem;
         }
 
         &:hover {

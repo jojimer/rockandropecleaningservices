@@ -57,6 +57,11 @@
 
         @include respond(phone) {
             padding: 0.5rem 0;
+
+            .row {
+                padding: 1rem 0;
+            }
+
             div.col-1-of-2 {
                 width: 100% !important;
                 text-align: center!important;

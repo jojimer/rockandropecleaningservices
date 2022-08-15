@@ -12,21 +12,36 @@
         height: 52rem;
     }
 
+    @include respond(phone) {
+        height: max-content;
+    }
+
     &-contacts {
         padding: 6rem 0;
+        margin-bottom: 0 !important;
         &__main {
             margin-bottom: 5rem;
             @include respond(tab-port) {
                 margin-bottom: 3.5rem;
             }
 
+            p {
+                @include respond(phone) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
             h4 {
                 @include respond(small-desktop) {
-                    font-size: 9em;
+                    font-size: 9rem;
                 }
 
                 @include respond(tab-port) {
-                    font-size: 7em;
+                    font-size: 7rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 5rem;
                 }
             }
         }
@@ -38,6 +53,11 @@
             @include respond(tab-port) {
                 padding: 0 3.5rem;
                 grid-template-columns: repeat(8, 1fr);
+            }
+
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+                margin-bottom: 6rem;
             }
 
             ul {
@@ -64,6 +84,15 @@
                         grid-column: span 3;
                     }
                 }
+
+                @include respond(phone) {
+                    line-height: 5rem;
+
+                    strong {
+                        margin-top: -2rem;
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -73,7 +102,14 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 7.5rem;
+        height: max-content;
+
+        @include respond(phone) {
+            .row {
+                padding: 1rem 0;
+                text-align: center;
+            }
+        }
 
         small {
             font-family: 'Roboto', sans-serif;

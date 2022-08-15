@@ -12,6 +12,10 @@
         height: 80rem;
     }
 
+    @include respond(phone) {
+        height: 60rem;
+    }
+
     &__shadow_title_wrap {
         background-color: $color-primary;
         height: 100%;
@@ -30,12 +34,20 @@
         @include respond(small-desktop) {
             clip-path: polygon(0 100%, 43.15% 100%, 97.95% 0, 0 0);
         }
+
+        @include respond(phone) {
+            clip-path: polygon(0 100%, 44.15% 100%, 94.95% 0, 0 0);
+        }
     }
 
     &__shadow_title {
         position: absolute;
         left: -4rem;    
         top: -3.5rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &-content {
@@ -49,10 +61,29 @@
             grid-template-columns: repeat(8,1fr);
         }
 
+        @include respond(phone) {
+            display: block;
+            width: 100%;
+        }
+
         &-title {
             grid-column: span 5;
             @include respond(small-desktop) {
                 grid-column: span 8;
+            }
+
+            @include respond(phone) {
+                font-size: 5rem;
+                transform: unset;
+                letter-spacing: 2rem !important;
+                text-align: center;
+                margin-top:3rem;
+                margin-bottom: 2rem;
+
+                span {
+                    letter-spacing: 2rem !important;
+                    transform: unset !important;                    
+                }
             }
         }
         &-list {
@@ -76,6 +107,13 @@
                 margin-left: -4rem;
                 margin-top: 2rem;
             }
+
+            @include respond(phone) {
+                font-size: 2rem;
+                margin: auto;
+                display: block;
+                width: 65%;
+            }
         }
     }
 
@@ -90,5 +128,10 @@
         right: 0;
         bottom: 0;
         z-index: -1;
+
+        @include respond(phone) {
+            height: 70rem;
+            width: 80%;
+        }
     }
 }
