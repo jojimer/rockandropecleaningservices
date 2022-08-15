@@ -58,7 +58,7 @@
             height: 6rem;
             width: 6rem;
             position: fixed;
-            top: 7.5rem;
+            top: 7rem;
             right: 6rem;
             border-radius: 50%;
             z-index: 2000;
@@ -199,14 +199,14 @@
 
     &__button {
         @include respond(phone) {
-            top: 8.5rem;
+            top: 8rem;
             right: 3rem;
         }
     }
 
     &__background {
         @include respond(phone) {
-            top: 9.5rem;
+            top: 9rem;
             right: 4rem;
         }
     }

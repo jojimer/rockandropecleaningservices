@@ -677,7 +677,7 @@ a:link, a:visited, a:focus {
     height: 6rem;
     width: 6rem;
     position: fixed;
-    top: 7.5rem;
+    top: 7rem;
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
@@ -774,12 +774,12 @@ a:link, a:visited, a:focus {
 
 @media only screen and (max-width: 37.5em) {
   .navigation__button {
-    top: 8.5rem;
+    top: 8rem;
     right: 3rem; } }
 
 @media only screen and (max-width: 37.5em) {
   .navigation__background {
-    top: 9.5rem;
+    top: 9rem;
     right: 4rem; } }
 
 .row {
