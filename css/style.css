@@ -483,6 +483,9 @@ a:link, a:visited, a:focus {
   @media only screen and (max-width: 75em) {
     .form {
       height: 150vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .form {
+      height: 100%; } }
   .form-container {
     background-color: #fff;
     width: 50%;
@@ -499,6 +502,11 @@ a:link, a:visited, a:focus {
       .form-container {
         transform: translateY(75vh);
         top: -50vh; } }
+    @media only screen and (max-width: 37.5em) {
+      .form-container {
+        width: 80%;
+        top: -65%;
+        grid-template-rows: 1fr; } }
   .form-title {
     padding: 2rem; }
   .form-get-quote {
@@ -514,9 +522,15 @@ a:link, a:visited, a:focus {
   .form-input-wrap {
     text-align: left;
     padding: 1rem 0.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .form-input-wrap {
+        width: 100%; } }
     .form-input-wrap label, .form-input-wrap input {
       display: block;
       width: 20vw; }
+      @media only screen and (max-width: 37.5em) {
+        .form-input-wrap label, .form-input-wrap input {
+          width: 100%; } }
   .form textarea {
     width: 100%;
     margin: 0 0.5rem 1.5rem; }
@@ -539,6 +553,24 @@ a:link, a:visited, a:focus {
       .form svg {
         height: 3rem;
         width: 3rem; } }
+
+.phone--get-a-quote {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .phone--get-a-quote {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: block;
+      background-color: #FF7F24;
+      color: #5c3913 !important;
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 900;
+      font-size: 3rem;
+      text-align: center;
+      padding: 1.5rem;
+      z-index: 3;
+      box-shadow: 1px 11px 15px 2px; } }
 
 .header {
   position: fixed;
@@ -709,7 +741,12 @@ a:link, a:visited, a:focus {
     text-align: center;
     width: 100%; }
   .navigation__item {
-    margin: 1rem; }
+    margin: 1rem; } }
+  @media only screen and (max-width: 56.25em) and (max-width: 37.5em) {
+    .navigation__item:last-child {
+      display: none; } }
+
+@media only screen and (max-width: 56.25em) {
   .navigation__link:link, .navigation__link:visited {
     display: inline-block;
     font-size: 3rem;
@@ -1222,7 +1259,7 @@ a:link, a:visited, a:focus {
       @media only screen and (max-width: 37.5em) {
         .footer-contacts__sub {
           grid-template-columns: 1fr;
-          margin-bottom: 6rem; } }
+          margin-bottom: 4.5rem; } }
       .footer-contacts__sub ul {
         width: fit-content;
         list-style-type: none;
@@ -1267,3 +1304,7 @@ a:link, a:visited, a:focus {
       @media only screen and (max-width: 82.5em) {
         .footer-copyright small {
           padding: 2.8rem 0; } }
+      @media only screen and (max-width: 37.5em) {
+        .footer-copyright small {
+          padding: 2rem 0;
+          font-size: 1.35rem; } }

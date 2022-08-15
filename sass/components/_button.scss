@@ -1,0 +1,19 @@
+.phone--get-a-quote {
+    display: none;
+
+    @include respond(phone) {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        background-color: $color-primary;
+        color: $color-primary-dark !important;
+        font-family: 'Lexend Deca', sans-serif;
+        font-weight: 900;
+        font-size: 3rem;
+        text-align: center;
+        padding: 1.5rem;
+        z-index: 3;
+        box-shadow: 1px 11px 15px 2px;
+    }
+}

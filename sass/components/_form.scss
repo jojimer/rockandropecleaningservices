@@ -16,6 +16,10 @@
         height: 150vh;
     }
 
+    @include respond(phone) {
+        height: 100%;
+    }
+
     &-container {
         background-color: $color-white;
         width: 50%;
@@ -32,6 +36,12 @@
         @include respond(tab-port) {
             transform: translateY(75vh);
             top: -50vh;
+        }
+
+        @include respond(phone) {
+            width: 80%;
+            top: -65%;
+            grid-template-rows: 1fr;
         }
     }
 
@@ -58,10 +68,17 @@
     &-input-wrap {
         text-align: left;
         padding: 1rem 0.5rem;
+        @include respond(phone) {
+            width: 100%;
+        }
 
         label, input {
             display: block;
             width: 20vw;
+
+            @include respond(phone) {
+                width: 100%;
+            }
         }        
     }
 

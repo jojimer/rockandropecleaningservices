@@ -150,6 +150,12 @@
     
         &__item {
             margin: 1rem;
+
+            @include respond(phone) {
+                &:last-child {
+                    display: none;
+                }
+            }
         }
     
         &__link {
