@@ -266,6 +266,18 @@
             font-size: 1.7rem;
         }
 
+        @include respond(phone-land) {
+            strong {
+                font-size: 1.5rem;
+            }
+        }
+
+        @include respond(phone) {
+            strong {
+                font-size: 1.8rem;
+            }
+        }
+
         li {
             font-weight: 300;
         }

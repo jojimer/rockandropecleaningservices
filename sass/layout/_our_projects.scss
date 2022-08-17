@@ -36,13 +36,68 @@
 
     }
 
-    &-galleries{
+    &--galleries{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5rem;
 
         @include respond(phone) {
             grid-template-columns: 1fr;
+        }
+    }
+
+    &--pagination {
+        margin-top: 5rem;
+        text-align: center;
+        color: $color-primary-dark;
+        font-size: 1.75rem;
+        font-family: 'Roboto', sans-serif;
+        z-index: 2;
+
+        &-wrap {
+            list-style: none;
+            display: inline-block;
+
+            .pagination-left-arrow::after,
+            .pagination-right-arrow::after {
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+                margin: 0 1.5rem;
+            }
+
+            .pagination-left-arrow {
+                visibility: hidden;
+                &::after {
+                    content: "←";
+                    float: left;
+                }
+            }
+
+            .pagination-right-arrow::after {
+                content: "→";
+                float: right;
+            }
+
+            &.left>.pagination-left-arrow {
+                visibility: visible;
+            }
+
+            &.end>.pagination-right-arrow {
+                visibility: hidden;
+            }
+        }
+
+        .pagers {
+            margin: 0 1.5rem;
+            cursor: pointer;
+            float: left;
+            position: relative;
+            z-index: 2;
+
+            &.active-pagination {
+                color: $color-primary;
+            }
         }
     }
 

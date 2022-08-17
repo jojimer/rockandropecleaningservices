@@ -4,17 +4,16 @@
     }
 
     height: 80rem;
-    background-image:  linear-gradient( to right,rgba($color-primary-dark, 0.5) 40%,rgba($color-black, 0)), url(../img/hero.jpg);
+    background-image:  linear-gradient( to right,rgba($color-primary-dark, 0.5) 40%,rgba($color-black, 0)), url(../img/hero1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    background-blend-mode: difference;
+    background-position-y: top;
+    background-position-x: right;
 
     @include respond(small-desktop) {
         height: 65rem;
-    }
-
-    @include respond(tab-port) {
-        background-position-x: -10rem;
     }
 
     @include respond(phone) {

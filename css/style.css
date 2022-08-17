@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
@@ -262,6 +263,12 @@ a:link, a:visited, a:focus {
     .footer-contacts__sub {
       padding: 0 7.5rem;
       font-size: 1.7rem; } }
+  @media only screen and (max-width: 47.2em) {
+    .footer-contacts__sub strong {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer-contacts__sub strong {
+      font-size: 1.8rem; } }
   .footer-contacts__sub li {
     font-weight: 300; }
 
@@ -828,19 +835,19 @@ a:link, a:visited, a:focus {
 
 .hero {
   height: 80rem;
-  background-image: linear-gradient(to right, rgba(92, 57, 19, 0.5) 40%, rgba(8, 8, 8, 0)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right, rgba(92, 57, 19, 0.5) 40%, rgba(8, 8, 8, 0)), url(../img/hero1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%; }
+  width: 100%;
+  background-blend-mode: difference;
+  background-position-y: top;
+  background-position-x: right; }
   @media only screen and (min-width: 56.25em) {
     .hero {
       margin-top: 15rem; } }
   @media only screen and (max-width: 64em) {
     .hero {
       height: 65rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .hero {
-      background-position-x: -10rem; } }
   @media only screen and (max-width: 37.5em) {
     .hero {
       background-position-x: 100%;
@@ -958,15 +965,15 @@ a:link, a:visited, a:focus {
     .about-grids__images :nth-child(1) {
       background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_team1.jpg"); }
     .about-grids__images :nth-child(2) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_at_work1.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/cleaningServices/DLS_Benilde/6.jpg"); }
     .about-grids__images :nth-child(3) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_at_work2.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/cleaningServices/DLS_Benilde/4.jpg"); }
     .about-grids__images :nth-child(4) {
       background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_team2.jpg"); }
     .about-grids__images :nth-child(5) {
       background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_team3.jpg"); }
     .about-grids__images :nth-child(6) {
-      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/about_us/rockandrope_at_work3.jpg"); }
+      background-image: linear-gradient(to bottom right, rgba(255, 127, 36, 0.2) 20%, rgba(92, 57, 19, 0.2)), url("../img/cleaningServices/DLS_Benilde/1.jpg"); }
   .about-grids__team_image {
     background-blend-mode: color-burn;
     background-size: cover;
@@ -1156,13 +1163,49 @@ a:link, a:visited, a:focus {
       cursor: pointer; }
       .our_projects-lists select:focus-visible {
         outline: none; }
-  .our_projects-galleries {
+  .our_projects--galleries {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5rem; }
     @media only screen and (max-width: 37.5em) {
-      .our_projects-galleries {
+      .our_projects--galleries {
         grid-template-columns: 1fr; } }
+  .our_projects--pagination {
+    margin-top: 5rem;
+    text-align: center;
+    color: #5c3913;
+    font-size: 1.75rem;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2; }
+    .our_projects--pagination-wrap {
+      list-style: none;
+      display: inline-block; }
+      .our_projects--pagination-wrap .pagination-left-arrow::after,
+      .our_projects--pagination-wrap .pagination-right-arrow::after {
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        margin: 0 1.5rem; }
+      .our_projects--pagination-wrap .pagination-left-arrow {
+        visibility: hidden; }
+        .our_projects--pagination-wrap .pagination-left-arrow::after {
+          content: "←";
+          float: left; }
+      .our_projects--pagination-wrap .pagination-right-arrow::after {
+        content: "→";
+        float: right; }
+      .our_projects--pagination-wrap.left > .pagination-left-arrow {
+        visibility: visible; }
+      .our_projects--pagination-wrap.end > .pagination-right-arrow {
+        visibility: hidden; }
+    .our_projects--pagination .pagers {
+      margin: 0 1.5rem;
+      cursor: pointer;
+      float: left;
+      position: relative;
+      z-index: 2; }
+      .our_projects--pagination .pagers.active-pagination {
+        color: #FF7F24; }
   .our_projects-gallery {
     width: 100%;
     height: 27rem;

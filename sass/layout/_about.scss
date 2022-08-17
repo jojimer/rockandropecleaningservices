@@ -34,10 +34,10 @@
                 @include bg_image_gradient('../img/about_us/rockandrope_team1.jpg');
             }
             & :nth-child(2){
-                @include bg_image_gradient('../img/about_us/rockandrope_at_work1.jpg');
+                @include bg_image_gradient('../img/cleaningServices/DLS_Benilde/6.jpg');
             }
             & :nth-child(3){
-                @include bg_image_gradient('../img/about_us/rockandrope_at_work2.jpg');
+                @include bg_image_gradient('../img/cleaningServices/DLS_Benilde/4.jpg');
             }
             & :nth-child(4){
                 @include bg_image_gradient('../img/about_us/rockandrope_team2.jpg');
@@ -46,7 +46,7 @@
                 @include bg_image_gradient('../img/about_us/rockandrope_team3.jpg');
             }
             & :nth-child(6){
-                @include bg_image_gradient('../img/about_us/rockandrope_at_work3.jpg');
+                @include bg_image_gradient('../img/cleaningServices/DLS_Benilde/1.jpg');
             }
         }
         &__team_image {

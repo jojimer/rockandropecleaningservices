@@ -2,16 +2,39 @@ const projects = {
     cleaningServices: {
         service_name: "Cleaning Services",
         img: [
+            { folder_name: "burgosWindFarm", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"] },
+            { folder_name: "okada", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "offshoreProject", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },            
+            { folder_name: "fifthAvenue", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg"] },
+            { folder_name: "wCity", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.png","10.jpg","11.jpg"] },
+            { folder_name: "verticalGardenCS", images: ["1.jpg","2.jpg","3.jpg"] },
+            { folder_name: "keyland", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "mammotHotel", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
+            { folder_name: "oreCentral", images: ["4.jpg","1.jpg","2.png","3.jpg"] },
+            { folder_name: "PililiaWindFarm", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
+            { folder_name: "ortigasProjectCS", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "pasayProjectWC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "smKeppelWC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"] },
             { folder_name: "alphaland", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
             { folder_name: "Araneta", images: ["1.jpg","2.jpg","3.jpg"] },
             { folder_name: "Bellevue", images: ["1.jpg","2.jpg","3.webp","4.webp"] },
+            { folder_name: "davaoProjectWC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
             { folder_name: "CrimsonEntrata", images: ["1.webp","2.webp","3.webp","4.webp"] },
             { folder_name: "DLS_Benilde", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg"] },
             { folder_name: "Gateway", images: ["1.jpg","2.jpg","3.jpg","4.webp"] },
             { folder_name: "Manulife", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"] },
             { folder_name: "MedicalCity", images: ["1.webp","2.webp","3.jpg","4.webp","5.jpg"] },
             { folder_name: "RCBC_BGC", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
-            { folder_name: "SM_Aura", images: ["1.webp","2.jpg","3.jpg"] }
+            { folder_name: "SM_Aura", images: ["1.webp","2.jpg","3.jpg"] },   
+            { folder_name: "alabangProjectCS", images: ["1.jpg","2.jpg","3.jpg"] },
+            { folder_name: "belmontHotelCS", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
+            { folder_name: "berthaphil", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "bgcTaguigWC", images: ["1.jpg","2.jpg"] },
+            { folder_name: "sakuraTowerWC", images: ["1.jpg","2.jpg","3.jpg"] },
+            { folder_name: "sedaNuvali", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "sonata", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "threeCentral", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
+            { folder_name: "257WC", images: ["4.jpg","2.jpg","3.jpg","6.jpg","5.jpg","1.jpg"] },
         ]
     },
     paintAndSealantJob: {
@@ -19,12 +42,29 @@ const projects = {
         img: [
             { folder_name: "bgc_project", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg"] },
             { folder_name: "davao_project", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
+            { folder_name: "bangkoSentralPJ", images: ["1.jpg","2.jpg"] },
+            { folder_name: "oneBinondo", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"] },
+            { folder_name: "PCAS", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
+            { folder_name: "picadillyStarRS", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
+        ]
+    },
+    glassInstallation: {
+        service_name: "Glass Installation",
+        img: [
+            { folder_name: "bgcGR", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
+            { folder_name: "ortigasPasigGI", images: ["1.jpg","2.jpg"] },
+            { folder_name: "rockWellGRE", images: ["1.jpg","2.jpg","3.jpg"] },
+            { folder_name: "rockWellGRI", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
+            { folder_name: "unknownProject1GI", images: ["1.jpg","2.jpg","3.jpg"] },
         ]
     },
     repairAndMaintenance: {
         service_name: "Repair And Maintenance",
         img: [
             { folder_name: "rockwell_project", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"] },
+            { folder_name: "bgcProject", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"] },
+            { folder_name: "edsaProjectCDLD", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
+            { folder_name: "lasalleTaft", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
         ]
     },
     rectificationWorks: {
@@ -32,6 +72,7 @@ const projects = {
         img: [
             { folder_name: "highStreetBGC", images: ["1.jpg","2.jpg","3.jpg"] },
             { folder_name: "picadillyStar", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg"] },
+            { folder_name: "lawson", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },            
         ]
     },
     buildingInspection: {
@@ -39,12 +80,20 @@ const projects = {
         img: [
             { folder_name: "waterLeakTest", images: ["1.jpg","2.jpg","3.jpg"] },
         ]
+    },
+    ropeAccess: {
+        service_name: "Rope Access",
+        img: [
+            { folder_name: "gnPowerBataan", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"] },
+            { folder_name: "saintBenilde", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
+        ]
     }
 }
 
 // Get All Project Keys
 const projectKey = Object.keys(projects).map(key => key);
 const galleries = document.getElementById('galleries');
+const pagination = document.getElementById('pagination');
 const gallerySelector = document.getElementById('project_filter');
 const style = "linear-gradient( to bottom right,rgba(255,127,36, 0.2) 20%, rgba(92,57,19, 0.2)),";
 const initGallery = (e) => {
@@ -67,9 +116,47 @@ const initGallery = (e) => {
     $('.arrowl').css('display', 'none');
 }
 
+const changePage = (e) => {
+    const pageIndex = e.target.getAttribute('data-index-page');
+    const projectService = e.target.getAttribute('data-project');
+    const maxPages = parseInt(pageIndex)+1;
+    $('.our_projects-gallery').css('display','none');
+    $("."+projectService+"-"+pageIndex).fadeIn(500);
+    $('.active-pagination').removeClass('active-pagination');
+    $('[data-index-page='+pageIndex+']').addClass('active-pagination');
+    if(pageIndex != 0){
+        $('.pagination-'+projectService).addClass('left');
+    }else{
+        $('.pagination-'+projectService).removeClass('left');
+    }
+    if($('.pagination-'+projectService).hasClass('maxxed-'+maxPages)){
+        $('.pagination-'+projectService).addClass('end');
+    }else{
+        $('.pagination-'+projectService).removeClass('end');
+    }
+}
+
+const pageLeft = () => {
+    let search = $('.pagers.active-pagination');
+    search.prev().click();
+}
+
+const pageRight = () => {
+    let search = $('.pagers.active-pagination');
+    search.next().click();
+}
+
 const changeGallery = (key) => {
     $('.our_projects-gallery').fadeOut(1);
-    $(`.our_projects-gallery[data-project=${key}]`).fadeIn(750);
+    $('.our_projects--pagination-wrap').fadeOut(1);
+    $(`.${key}-0`).fadeIn(750);    
+    
+    let pagination = $(`.pagination-${key}`);
+        pagination.fadeIn(750);
+        pagination.removeClass('end left');
+    let pagers = $(`.pagination-${key} li.pagers`);
+        pagers.removeClass('active-pagination');    
+        pagers.first().addClass('active-pagination');
 }
 
 const moveRight = () => {
@@ -106,24 +193,65 @@ const moveLeft = () => {
     }
 }
 
+const paginationMaker = (paginate,key) => {
+    let pager = document.createElement('li');
+    pager.innerText = paginate+1;
+    pager.classList = (paginate === 0) ? "active-pagination pagers" : "pagers";
+    pager.setAttribute('data-index-page',paginate);
+    pager.setAttribute('data-project',key);
+    pager.addEventListener('click',changePage);
+    return pager; 
+}
+
 // Create Gallery Preview
 projectKey.map((key,i) => {
+    let pager, arrow, paginate = 0;
+    let pagination_wrap = document.createElement('ul');
+    let maxGallery = projects[key].img.length;
+
     projects[key].img.map((v,index) => {
+        if(((index+1) % 6) === 0){
+            pager = paginationMaker(paginate,key);
+            pagination_wrap.append(pager);
+        };
         const galleryElement = document.createElement('div');
         const src = `./img/${key}/${v.folder_name}/${v.images[0]}`;
-        galleryElement.classList = "our_projects-gallery";
+        galleryElement.classList = key+"-"+paginate+" our_projects-gallery";
         galleryElement.setAttribute('data-index',index);
         galleryElement.setAttribute('data-project',key);
-        if(i !== 0) galleryElement.style.display = "none";
+        galleryElement.setAttribute('data-page',paginate);
+        if(i !== 0 || index > 5) galleryElement.style.display = "none";
         galleryElement.style.backgroundImage = style+` url(${src})`;
         galleryElement.addEventListener('click',initGallery);
         galleries.appendChild(galleryElement);
+        if(((index+1) % 6) === 0) paginate++;
     })
+
+    if(maxGallery - (paginate*6) > 0 && paginate !== 0){
+        pager = paginationMaker(paginate,key);
+        pagination_wrap.append(pager);
+        paginate++
+    }
 
     const optionElement = document.createElement('option');
     optionElement.setAttribute('value',key);
     optionElement.innerHTML = projects[key].service_name;    
     gallerySelector.appendChild(optionElement);
+    if(paginate > 1) {
+        // Left Arrow
+        arrow = document.createElement('span');
+        arrow.classList = "pagination-left-arrow";
+        arrow.addEventListener('click',pageLeft);
+        pagination_wrap.prepend(arrow);
+        // Right Arrow
+        arrow = document.createElement('span');
+        arrow.classList = "pagination-right-arrow";
+        arrow.addEventListener('click',pageRight);
+        pagination_wrap.append(arrow);
+        // Append Pagination
+        pagination_wrap.classList = "our_projects--pagination-wrap "+"pagination-"+key+" maxxed-"+paginate;
+        pagination.appendChild(pagination_wrap);
+    }
 });
 
 //gallerySelector.addEventListener('change',changeGallery);
@@ -193,16 +321,17 @@ $(document).on('click','div.form, div.form svg',function(e){
 });
 
 // Active Navigation Link
-const changedActiveLink = function(e,link){
-    $('.navigation__wrap a').removeClass('active');
-    if(e !== '#get_a_quote') $(link).addClass('active');
+const changedActiveLink = function(link){
+    $(link).addClass('active');
     const checkBoxes = $('#navi-toggle');
     checkBoxes.prop("checked", false);
 }
 
 $(document).on('click','.navigation__wrap a',function(e){
-    $('.navigation__wrap a').removeClass('active');
-    changedActiveLink(e.target.hash,this);
+    if(e.target.hash !== '#get_a_quote') {
+        $('.navigation__wrap a').removeClass('active');
+        changedActiveLink(this);
+    }    
 });
 
 let scrollPosition = 0;
