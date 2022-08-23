@@ -98,6 +98,10 @@
             flex-wrap: wrap;
             align-content: end;
 
+            li {
+                width: 100%;
+            }
+
             @include respond(small-desktop) {
                 grid-column: span 5;
                 grid-column-end: -3;
@@ -114,7 +118,7 @@
                 font-size: 2rem;
                 margin: 0 auto 3rem;
                 display: block;
-                width: 65%;
+                width: 70%;
                 height: 100%;
                 padding-left: 1.5rem;
             }

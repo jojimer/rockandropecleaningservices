@@ -1,8 +1,7 @@
 const projects = {
     cleaningServices: {
-        service_name: "Cleaning Services",
-        img: [
-            { folder_name: "burgosWindFarm", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"] },
+        service_name: "Facade Cleaning",
+        img: [            
             { folder_name: "okada", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
             { folder_name: "offshoreProject", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },            
             { folder_name: "fifthAvenue", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg"] },
@@ -10,8 +9,7 @@ const projects = {
             { folder_name: "verticalGardenCS", images: ["1.jpg","2.jpg","3.jpg"] },
             { folder_name: "keyland", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
             { folder_name: "mammotHotel", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
-            { folder_name: "oreCentral", images: ["4.jpg","1.jpg","2.png","3.jpg"] },
-            { folder_name: "PililiaWindFarm", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
+            { folder_name: "oreCentral", images: ["4.jpg","1.jpg","2.png","3.jpg"] },            
             { folder_name: "ortigasProjectCS", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
             { folder_name: "pasayProjectWC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"] },
             { folder_name: "smKeppelWC", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"] },
@@ -65,6 +63,8 @@ const projects = {
             { folder_name: "bgcProject", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"] },
             { folder_name: "edsaProjectCDLD", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
             { folder_name: "lasalleTaft", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },
+            { folder_name: "waterLeakTest", images: ["1.jpg","2.jpg","3.jpg"] },
+            { folder_name: "gnPowerBataan", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"] },
         ]
     },
     rectificationWorks: {
@@ -75,17 +75,11 @@ const projects = {
             { folder_name: "lawson", images: ["1.jpg","2.jpg","3.jpg","4.jpg"] },            
         ]
     },
-    buildingInspection: {
-        service_name: "Building Inspection",
+    windTurbineServices: {
+        service_name: "Wind Turbine Services",
         img: [
-            { folder_name: "waterLeakTest", images: ["1.jpg","2.jpg","3.jpg"] },
-        ]
-    },
-    ropeAccess: {
-        service_name: "Rope Access",
-        img: [
-            { folder_name: "gnPowerBataan", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"] },
-            { folder_name: "saintBenilde", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
+            { folder_name: "burgosWindFarm", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"] },
+            { folder_name: "PililiaWindFarm", images: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"] },
         ]
     }
 }
@@ -313,6 +307,7 @@ $(document).on('click','.img-list-choices',function(){
 // Show Get Quote Form
 $(document).on('click','.btn--get-quote',function(){
     $('div.form').fadeIn(500);
+    // window.location.href = "mailto:rockandropecleans@yahoo.com";
 });
 
 // Close Get Quote Form
