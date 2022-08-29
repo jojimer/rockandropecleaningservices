@@ -272,12 +272,6 @@
             }
         }
 
-        @include respond(phone) {
-            strong {
-                font-size: 1.8rem;
-            }
-        }
-
         li {
             font-weight: 300;
         }
