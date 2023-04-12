@@ -54,7 +54,7 @@
             background-size: cover;
             border-image-width: 0;
             width: -webkit-fill-available;
-            @include scale-up(1.1,1);
+            // @include scale-up(1.1,1);
         }
         &__text {
             grid-area: right;

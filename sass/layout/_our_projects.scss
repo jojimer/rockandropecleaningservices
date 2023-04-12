@@ -52,7 +52,7 @@
         color: $color-primary-dark;
         font-size: 1.75rem;
         font-family: 'Roboto', sans-serif;
-        z-index: 2;
+        z-index: 1;
 
         &-wrap {
             list-style: none;
@@ -62,7 +62,7 @@
             .pagination-right-arrow::after {
                 cursor: pointer;
                 position: relative;
-                z-index: 2;
+                z-index: 1;
                 margin: 0 1.5rem;
             }
 
@@ -93,7 +93,7 @@
             cursor: pointer;
             float: left;
             position: relative;
-            z-index: 2;
+            z-index: 1;
 
             &.active-pagination {
                 color: $color-primary;

@@ -975,14 +975,7 @@ a:link, a:visited, a:focus {
     background-blend-mode: color-burn;
     background-size: cover;
     border-image-width: 0;
-    width: -webkit-fill-available;
-    transition: 500ms; }
-    .about-grids__team_image:not(:hover) {
-      z-index: 1; }
-    .about-grids__team_image:hover {
-      z-index: 0;
-      transform: scale(1.1);
-      background-position: top; }
+    width: -webkit-fill-available; }
   .about-grids__text {
     grid-area: right;
     text-align: justify;
@@ -1175,7 +1168,7 @@ a:link, a:visited, a:focus {
     color: #5c3913;
     font-size: 1.75rem;
     font-family: 'Roboto', sans-serif;
-    z-index: 2; }
+    z-index: 1; }
     .our_projects--pagination-wrap {
       list-style: none;
       display: inline-block; }
@@ -1183,7 +1176,7 @@ a:link, a:visited, a:focus {
       .our_projects--pagination-wrap .pagination-right-arrow::after {
         cursor: pointer;
         position: relative;
-        z-index: 2;
+        z-index: 1;
         margin: 0 1.5rem; }
       .our_projects--pagination-wrap .pagination-left-arrow {
         visibility: hidden; }
@@ -1202,7 +1195,7 @@ a:link, a:visited, a:focus {
       cursor: pointer;
       float: left;
       position: relative;
-      z-index: 2; }
+      z-index: 1; }
       .our_projects--pagination .pagers.active-pagination {
         color: #FF7F24; }
   .our_projects-gallery {

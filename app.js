@@ -311,8 +311,8 @@ $(document).on('click','.btn--get-quote',function(){
 });
 
 // Close Get Quote Form
-$(document).on('click','div.form, div.form svg',function(e){
-    if(e.target.className === 'form' || e.target.className.baseVal === 'form-close') $('div.form').fadeOut(250);
+$(document).on('click','div.form, div.form svg.form-close',function(e){
+    if(e.target.className != 'form-container') $('div.form').fadeOut(250);
 });
 
 // Active Navigation Link
