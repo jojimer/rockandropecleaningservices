@@ -274,7 +274,7 @@ a:link, a:visited, a:focus {
   font-family: 'Lexend Deca', sans-serif;
   color: #FF7F24; }
 
-.form label, .form input, .form textarea {
+.form label, .form input, .form textarea, .form button {
   font-family: 'Roboto', sans-serif; }
 
 .form label {
@@ -289,7 +289,7 @@ a:link, a:visited, a:focus {
   font-weight: 300;
   overflow: hidden; }
 
-.form input[type=submit] {
+.form input[type=submit], .form #submit-form {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
@@ -297,7 +297,10 @@ a:link, a:visited, a:focus {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1rem 3rem; }
+  padding: 1rem 3rem;
+  border: 1px solid rgba(8, 8, 8, 0.25);
+  border-radius: 0.5rem;
+  cursor: pointer; }
 
 .u-center-text {
   text-align: center !important; }

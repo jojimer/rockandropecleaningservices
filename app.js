@@ -387,3 +387,17 @@ $(document).on('click','.arrow-up',function(e){
 // Generate Year
 const year = new Date().getFullYear();
 $('span.year').text(year);
+
+// Form Submission
+$('form').submit(function(e) {
+    e.preventDefault();
+    $('#submit-form').text('Submiting...');
+    setTimeout(function(){
+        $('#submit-form').text('Success');
+        $('.form-get-quote').find('input').val('');
+        $('.form-get-quote').find('textarea').val('');
+    },1500)
+    setTimeout(function(){
+        $('#submit-form').text('Get Quote');
+    },3000)
+})
