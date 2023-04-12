@@ -312,7 +312,7 @@ $(document).on('click','.btn--get-quote',function(){
 
 // Close Get Quote Form
 $(document).on('click','div.form, div.form svg.form-close',function(e){
-    if(e.target.className != 'form-container') $('div.form').fadeOut(250);
+    if(e.target.className == 'form' || e.target.tagName == 'svg' || e.target.tagName == 'path') $('div.form').fadeOut(250);
 });
 
 // Active Navigation Link
@@ -383,3 +383,7 @@ $(document).on('click','.arrow-up',function(e){
         behavior: 'smooth'
       });
 });
+
+// Generate Year
+const year = new Date().getFullYear();
+$('span.year').text(year);
