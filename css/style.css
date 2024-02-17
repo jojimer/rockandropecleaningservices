@@ -889,7 +889,8 @@ a:link, a:visited, a:focus {
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(55rem, auto);
-  grid-template-areas: "left-top right" "left-bottom right"; }
+  grid-template-areas: "left-top right"
+ "left-bottom right"; }
   @media only screen and (max-width: 56.25em) {
     .overview {
       grid-auto-rows: minmax(51rem, auto); }
@@ -898,7 +899,9 @@ a:link, a:visited, a:focus {
         height: 8rem; } }
   @media only screen and (max-width: 37.5em) {
     .overview {
-      grid-template-areas: "left-top right" "left-bottom right" "left bottom";
+      grid-template-areas: "left-top right"
+ "left-bottom right"
+ "left bottom";
       grid-template-columns: 1fr; } }
   .overview-grids__what_we_do {
     background-color: #FF7F24;
@@ -1350,3 +1353,4 @@ a:link, a:visited, a:focus {
         .footer-copyright small {
           padding: 2rem 0;
           font-size: 1.35rem; } }
+.about-grids__text::after, .our_projects::after { display: none; } 
