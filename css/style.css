@@ -1353,4 +1353,4 @@ a:link, a:visited, a:focus {
         .footer-copyright small {
           padding: 2rem 0;
           font-size: 1.35rem; } }
-.about-grids__text::after, .our_projects::after { display: none; } 
+.about-grids__text::after, .our_projects::after, .btn--get-quote, .phone--get-a-quote { display: none!important; } 
